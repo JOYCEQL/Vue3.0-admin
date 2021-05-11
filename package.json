@@ -1,0 +1,36 @@
+{
+  "name": "vite-vue",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build:beta": "vite build --mode beta",
+    "build:release": "vite build --mode release",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "ant-design-vue": "^2.1.2",
+    "axios": "^0.21.1",
+    "babel-plugin-import": "^1.13.3",
+    "echarts": "^5.1.0",
+    "js-md5": "^0.7.3",
+    "nprogress": "^0.2.0",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.6",
+    "vuex": "^4.0.0",
+    "wangeditor": "^4.6.17",
+    "xgplayer": "^2.20.3",
+    "xgplayer-flv": "^2.4.21",
+    "xgplayer-flv.js": "^2.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.5",
+    "css-loader": "^5.2.4",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "vite": "^2.1.5",
+    "vite-plugin-babel-import": "^2.0.2",
+    "vite-plugin-style-import": "^0.9.2"
+  }
+}
