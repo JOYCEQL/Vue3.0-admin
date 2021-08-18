@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-20 15:52:03
- * @LastEditTime: 2021-08-18 15:26:55
+ * @LastEditTime: 2021-08-18 15:40:03
  * @LastEditors: yuguangzhou
  * @Description: 
 -->
@@ -96,7 +96,7 @@ export default {
 }
 .login-wrapper{
   display: flex;
-  width: 80%;
+  width: 60%;
   background-color: #fff;
   border-radius: 10px;
 }
