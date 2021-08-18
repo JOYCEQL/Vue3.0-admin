@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-05-10 15:56:40
- * @LastEditTime: 2021-05-10 16:21:51
+ * @LastEditTime: 2021-07-01 13:43:19
  * @LastEditors: yuguangzhou
  * @Description: 富文本编辑器
 -->
@@ -9,7 +9,7 @@
   <div class="Editor">
     <h1>富文本编辑器</h1>
     <div class="content">
-            <div ref='editor'></div>
+        <div ref='editor'></div>
     </div>
   </div>
 </template>

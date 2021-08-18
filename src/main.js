@@ -1,7 +1,7 @@
 /*
  * @Author: yuguangzhou
  * @Date: 2021-04-19 14:34:50
- * @LastEditTime: 2021-05-11 14:57:44
+ * @LastEditTime: 2021-08-13 10:05:08
  * @LastEditors: yuguangzhou
  * @Description:入口文件
  */
@@ -44,3 +44,4 @@ app.use(Button)
   .use(Tabs)
   .use(Space)
 app.mount("#app");
+

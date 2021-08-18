@@ -1,12 +1,16 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-19 14:34:50
- * @LastEditTime: 2021-05-10 15:35:02
+ * @LastEditTime: 2021-07-01 10:41:46
  * @LastEditors: yuguangzhou
  * @Description: 
 -->
 <template>
-    <router-view ></router-view>
+      <router-view v-slot="{ Component }">
+          <keep-alive>
+              <component :is="Component"/>
+          </keep-alive>
+    </router-view>
 </template>
 <script setup>
 

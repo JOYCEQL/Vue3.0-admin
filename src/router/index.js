@@ -1,7 +1,7 @@
 /*
  * @Author: yuguangzhou
  * @Date: 2021-04-19 15:41:39
- * @LastEditTime: 2021-05-10 16:27:12
+ * @LastEditTime: 2021-05-22 10:13:18
  * @LastEditors: yuguangzhou
  * @Description: 路由配置
  */
@@ -10,9 +10,10 @@ import Home from "../views/Home";
 import Login from "../views/Login";
 import Swiper from "../views/Homesetting/Swiper.vue";
 import Chart from "../views/Homesetting/Chart.vue";
-import Dashboard from "../views/layout/Dashboard.vue"
+import Dashboard from "../views/Dashboard.vue"
 import Video from "../views/Video.vue"
 import Editor from "../views/Editor.vue"
+import Screen from "../views/Screen/index.vue"
 import NProgress from "nprogress"; // progress bar
 import "nprogress/nprogress.css"; // progress bar style
 import { UserOutlined, VideoCameraOutlined, UploadOutlined, MenuUnfoldOutlined, MenuFoldOutlined, DownOutlined, RobotOutlined, SettingFilled,SettingOutlined,CloseOutlined, LineHeightOutlined } from "@ant-design/icons-vue";
@@ -119,6 +120,11 @@ const router = createRouter({
       path: "/login",
       name: "Login",
       component: Login,
+    },
+    {
+      path: "/screen",
+      name: "Screen",
+      component: Screen,
     },
   ],
 });

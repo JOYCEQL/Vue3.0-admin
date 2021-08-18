@@ -1,17 +1,21 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-20 15:52:03
- * @LastEditTime: 2021-05-06 14:27:09
+ * @LastEditTime: 2021-08-18 15:26:55
  * @LastEditors: yuguangzhou
  * @Description: 
 -->
 <template>
   <div class="login-page">
-    <div class="login-content">
+    <div class="login-wrapper">
+      <div class="login-bg">
+        <img src="../assets/image/login-bg.png" alt="">
+      </div>
+      <div class="login-form">
       <div class="login-logo">
         <img src="../assets/image/logo.svg" alt="" />
       </div>
-      <div class="login-form">
+      <div class="login-content">
         <a-form :model="formData" ref="loginForm" :label-col="{ span: 4 }" :rules="rules" :wrapper-col="{ span: 14 }">
           <a-form-item ref="userName" label="" name="userName">
             <a-input style="width: 240px"  placeholder="admin"   allow-clear v-model:value="formData.userName" autocomplete="off"> </a-input>
@@ -23,6 +27,8 @@
         <a-button type="primary" @click="handleLogin" shape="round" style="width: 240px">登录</a-button>
       </div>
     </div>
+    </div>
+   
   </div>
 </template>
 <script>
@@ -78,41 +84,54 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .login-page {
   min-height: 100%;
-  /* background-color: #fff; */
-  background: url("../assets/image/login-bg.jpg") no-repeat 100% 100%;
+  background-color: #7350ac;
+  /* background: url("../assets/image/login-bg.png") no-repeat ; */
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.login-wrapper{
+  display: flex;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.login-bg{
+  width: 60%;
+  border-right: 1px solid #7350ac;
+  img{
+    width: 100%;
+  }
+}
+.login-form {
+  width: 40%;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .login-logo {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   margin: 10px auto 20px;
 }
 .login-logo img {
   width: 100px;
   height: 100%;
 }
+
 .login-content {
-  width: 420px;
-  height: 400px;
-  background-color: #fff;
-  padding: 6px;
-  border-radius: 4px;
-}
-.login-form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .login-tool {
   width: 240px;
-  margin: 20px auto;
+  margin: 30px auto;
   text-align: center;
 }
 </style>

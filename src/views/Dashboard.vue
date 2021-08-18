@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-22 14:20:47
- * @LastEditTime: 2021-05-06 13:46:59
+ * @LastEditTime: 2021-05-12 10:44:59
  * @LastEditors: yuguangzhou
  * @Description: 首页面板
 -->
@@ -32,10 +32,10 @@
 
 <script>
 import { reactive, ref, toRefs } from "vue";
-import vueImg from "../../assets/image/vue.png";
-import viteImg from "../../assets/image/vite.svg";
-import antdImg from "../../assets/image/antd.svg";
-import echartsImg from "../../assets/image/echarts.png"
+import vueImg from "../assets/image/vue.png";
+import viteImg from "../assets/image/vite.svg";
+import antdImg from "../assets/image/antd.svg";
+import echartsImg from "../assets/image/echarts.png"
 export default {
   name: "Dashboard",
   components: {},

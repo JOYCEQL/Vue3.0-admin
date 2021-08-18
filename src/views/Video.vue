@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-05-06 16:34:55
- * @LastEditTime: 2021-05-10 13:39:21
+ * @LastEditTime: 2021-06-17 16:48:40
  * @LastEditors: yuguangzhou
  * @Description:  视频播放器
 -->
@@ -37,7 +37,6 @@ export default {
     //     crossOrigin:true,
     //     isLive: true,
     // })
-
       let player = new Player({
           id: 'vs',
         	url: "//s1.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4",

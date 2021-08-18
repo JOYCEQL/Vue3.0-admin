@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-19 15:02:41
- * @LastEditTime: 2021-05-10 15:16:16
+ * @LastEditTime: 2021-05-22 11:32:35
  * @LastEditors: yuguangzhou
  * @Description: 
 -->
@@ -133,9 +133,7 @@ export default defineComponent({
       const res = await getUserInfoAjax();
       state.userInfo = res;
       // 获取路由数组--
-      console.log(route.path);
       state.routes = router.options.routes;
-      console.log(state.routes,'222');
       changeBread();
       state.selectedKeys = ref([`${route.path}`]);
       getRoutesList()

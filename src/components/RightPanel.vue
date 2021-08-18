@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2021-04-26 15:44:47
- * @LastEditTime: 2021-04-27 17:09:58
+ * @LastEditTime: 2021-05-12 11:14:21
  * @LastEditors: yuguangzhou
  * @Description: 右侧设置面板
 -->
@@ -21,6 +21,8 @@
             :after-visible-change="afterVisibleChange"
         >
           <a-checkbox v-model:checked="dark" @change="hanleDark" disabled>暗黑模式(暂不支持)</a-checkbox>
+          <h3>系统主题色</h3>
+        <color-picker></color-picker>
         </a-drawer>
   </div>
 </template>
@@ -28,11 +30,13 @@
 <script>
 import {reactive,ref, toRefs} from "vue"
 import { CloseOutlined,SettingOutlined } from "@ant-design/icons-vue";
+import ColorPicker  from "@/components/Theme/ColorPicker.vue"
 export default {
   name:"RightPanel",
   components: {
     CloseOutlined,
-    SettingOutlined
+    SettingOutlined,
+    ColorPicker
   },
   props:['showPanel'],
   emits:['showSetting'],

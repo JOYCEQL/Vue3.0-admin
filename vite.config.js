@@ -1,7 +1,7 @@
 /*
  * @Author: yuguangzhou
  * @Date: 2021-04-19 14:34:50
- * @LastEditTime: 2021-05-11 15:05:29
+ * @LastEditTime: 2021-05-12 14:31:03
  * @LastEditors: yuguangzhou
  * @Description:项目配置
  */
@@ -10,8 +10,8 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 import styleImport from "vite-plugin-style-import";
 // import vitePluginImport from 'vite-plugin-babel-import';
-
-const { getThemeVariables } = require('ant-design-vue/dist/theme');
+import { generateModifyVars } from './src/components/Theme/createPrimary';
+// const { getThemeVariables } = require('ant-design-vue/dist/theme');
 export default ({mode}) => defineConfig({
   plugins: [
     vue(),
@@ -27,13 +27,15 @@ export default ({mode}) => defineConfig({
     //   ],
     // }),
 
+    // 是 ant-design-vue/es/${name}/style/index 
+    // 而不是 ant-design-vue/es/${name}/style/css
     styleImport(
     {
     libs: [{
       libraryName: 'ant-design-vue',
       esModule: true,
       resolveStyle: (name) => {
-        return `ant-design-vue/es/${name}/style/css`;
+        return `ant-design-vue/es/${name}/style/index`;
       },
     }]
   }
@@ -43,15 +45,16 @@ export default ({mode}) => defineConfig({
     preprocessorOptions: {
       less: {
         // 主题色配置
-        modifyVars:
-        getThemeVariables({
-            // dark: true, // 开启暗黑模式
-          }),
+        // modifyVars:
+        // // getThemeVariables({
+        // //     dark: true, // 开启暗黑模式
+        // //   }),
         //  {
         //   "primary-color": "#1DA57A",
         //   "link-color": "#1DA57A",
         //   "border-radius-base": "2px",
         // },
+        modifyVars:generateModifyVars(),
         javascriptEnabled: true,
       },
     },
